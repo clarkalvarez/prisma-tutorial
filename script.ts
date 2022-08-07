@@ -10,9 +10,12 @@ async function main() {
 
   // console.log(createUser);
 
-  const findAllUser = await prisma.user.findMany();
+  // const findAllUser = await prisma.user.findMany();
 
-  console.log(findAllUser);
+  // console.log(findAllUser);
+
+  // const deleteData = await prisma.user.deleteMany();
+  // console.log(deleteData);
 
 }
 

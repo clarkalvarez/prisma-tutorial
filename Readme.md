@@ -40,3 +40,9 @@ npx prisma generate
 - Json Datatype to store json data
 - Unsupported Datatype: If prisma doesn't support a certain datatype, we can use this one. eg(Unsupported(""))
 - Can use  @id @default(uuid())
+- @updatedAt get current timestamp after update
+- @default(now()) get current timestamp
+- @@unique([fieldname,fieldname]) to declare fields as unique
+- @@index([fieldname]) to declare fields to have index 
+-  @@id([title,authorId]) to declare composite id in each fields
+
