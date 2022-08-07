@@ -15,9 +15,9 @@ I've followed this tutorial https://www.youtube.com/watch?v=RebA5J-rlwg which I 
 npx prisma init --datasource-provider postgresql
 ```
 
-Needs to have a postresql empty db
-Install Prisma Extenstion to have a better experience developing prisma projects
-If not yet applied, go to Preferences>Settings
-Then on the upper-right, click the Open Settings(JSON)
-And the copy this prisma config
-<img width="1680" alt="Screen Shot 2022-08-07 at 7 07 41 PM" src="https://user-images.githubusercontent.com/43803904/183287935-fecabb66-99f1-472a-92a9-fdb309045317.png">
+- Needs to have a postresql empty db
+- Install Prisma Extenstion to have a better experience developing prisma projects
+- If not yet applied:
+- 1. go to Preferences>Settings
+- 1. Then on the upper-right, click the Open Settings(JSON)
+- 1. And the copy this prisma config <img width="1680" alt="Screen Shot 2022-08-07 at 7 07 41 PM" src="https://user-images.githubusercontent.com/43803904/183287935-fecabb66-99f1-472a-92a9-fdb309045317.png">
