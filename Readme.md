@@ -80,4 +80,12 @@ npx prisma generate
         userPreference: { id: '1d394fda-0876-4cec-a121-df199b8c09ce' }
     }
 ```
-
+- For Logging Queries
+```bash
+const prisma = new PrismaClient({log:  ["query"]});
+```
+- findUnique use to search unique values. this includes those multiple unique constraints that was declared eg(@@unique([age, name]))
+- findFirst use to search first values on dbb
+- findMany using distinct will return only unique values
+- findMany using take will return number of users based on the given integer
+- findMany using skip will skip the first data while returning the next data based on take integer
