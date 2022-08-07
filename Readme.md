@@ -44,5 +44,40 @@ npx prisma generate
 - @default(now()) get current timestamp
 - @@unique([fieldname,fieldname]) to declare fields as unique
 - @@index([fieldname]) to declare fields to have index 
--  @@id([title,authorId]) to declare composite id in each fields
+- @@id([title,authorId]) to declare composite id in each fields
+- using include can use different references. can also use select to just call necessary fields (can't do both)
+```bash
+    include: {
+      userPreference: true,
+    }
+
+    result: userPreference: { id: 'aa9c9210-b9c2-4bda-9cf3-3950f203caed', emailUpdates: true }
+
+    select: {
+      name: true, 
+    }
+    result: { name: 'Kyle' }
+
+    select: {
+      name: true, 
+            userPreference: true,
+    }
+    result: {
+        name: 'Kyle',
+        userPreference: { id: '8400e1d6-d22c-4895-938e-1d25fbd801b1', emailUpdates: true }
+    }
+
+    select: {
+      name: true,
+      userPreference: {
+        select: {
+          id: true
+        }
+      }
+    }
+    result: {
+        name: 'Kyle',
+        userPreference: { id: '1d394fda-0876-4cec-a121-df199b8c09ce' }
+    }
+```
 

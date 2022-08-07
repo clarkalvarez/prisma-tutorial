@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon script.ts"
+    "start": "nodemon script.ts",
+    "deleteDB": "nodemon deletedb.ts",
+    "migrateDB": "npx prisma migrate dev --name test && npx prisma generate",
+    "deleteUpdateDB": "npx ts-node deletedb.ts && npx prisma migrate dev --name test && npx prisma generate"
+
+
   },
   "repository": {
     "type": "git",
